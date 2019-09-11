@@ -2,11 +2,6 @@ const { addAttachment } = require("@wdio/allure-reporter").default;
 const wdio_allure_ts = require("wdio-allure-ts");
 
 exports.config = {
-  // Host address of the running Selenium server.
-  host: "localhost",
-  port: 4444,
-  path: "/wd/hub",
-
   // ==================
   // Specify Test Files
   // ==================
@@ -38,10 +33,6 @@ exports.config = {
   // Warns when a deprecated command is used
   deprecationWarnings: false,
   //
-  // If you only want to run your tests until a specific amount of tests have failed use
-  // bail (default is 0 - don't bail, run all tests).
-  bail: 0,
-  //
   // Saves a screenshot to a given path if a command fails.
   screenshotPath: "./errorShots/",
   //
@@ -65,7 +56,7 @@ exports.config = {
   // Services take over a specific job you don't want to take care of. They enhance
   // your test setup with almost no effort. Unlike plugins, they don't add new
   // commands. Instead, they hook themselves up into the test process.
-  // services: [],//
+  services: ['selenium-standalone'],
   // Framework you want to run your specs with.
   // The following are supported: Mocha, Jasmine, and Cucumber
   // see also: http://webdriver.io/guide/testrunner/frameworks.html

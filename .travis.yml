@@ -6,9 +6,6 @@ addons:
   chrome: stable
 install:
 - npm install
-before_script:
-- npm run grid > /dev/null 2>&1 &  
-- sleep 20s
 script:
 - npm run test:ci
 

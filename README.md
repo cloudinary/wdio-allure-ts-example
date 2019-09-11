@@ -22,8 +22,6 @@ Following those instructions will get you a copy of the project up and running o
 **Install packages:**
 > npm install
 
-**Start Selenium grid:** *(start grid in separate terminal)*
-> npm run grid
 
 **Execute test suite:** *(npm test)
 > npm run suite todoMvcTestSuite
